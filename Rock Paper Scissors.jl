@@ -1,8 +1,8 @@
 function rock_paper_scissors()
     moves = ["🗿", "📃", "✂️"]
-    computer_move = moves[rand(1:3)]
+    computer = moves[rand(1:3)]
 
-    human_move = Base.prompt("Please enter 🗿, 📃, or ✂️")
+    human = Base.prompt("Please enter 🗿, 📃, or ✂️")
 
     print("Rock...")
     sleep(0.5)
@@ -15,16 +15,16 @@ function rock_paper_scissors()
     
     print("Go!\n")
 
-    if computer_move == human_move
+    if computer == human
         print("You tied!")
 
-    elseif computer_move == "✂️" && human_move == "📃"
+    elseif computer == "✂️" && human == "📃"
         print("You lose :( ")
 
-    elseif computer_move == "📃" && human_move == "🗿"
+    elseif computer == "📃" && human == "🗿"
         print("You lose :( ")
 
-    elseif computer_move == "🗿" && human_move == "✂️"
+    elseif computer == "🗿" && human == "✂️"
         print("You lose :( ")
 
     else
